@@ -1,0 +1,98 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+
+.user.text-0 {
+    margin-bottom: 15px;
+}
+.load-comment,.save-user{
+    float: right;
+}
+
+.dis-inblock{
+    display: inline-block;
+}
+
+.question.dis-inblock.bg-white.p-lr-15.p-tb-5.text-14.ver-top {
+    border-radius: 15px;
+    padding: 5px 12px;
+    background: #ecdddd !important;
+}
+.card.card-primary.card-outline.card-profile {
+    height: 98%;
+}
+
+button.btn.btn-block.btn-success.btn-update-order {
+    width: 23%;
+    margin: auto;
+}
+
+.card.card-default.custom-default {
+    display: table;
+    margin: auto;
+}
+
+input.form-control.size-product {
+    display: inline-block;
+    width: 32%;
+}
+
+.input-order {
+    overflow: auto;
+    max-height: 84vh;
+}
+
+.btn-success a {
+    color: white;
+}
+
+.list-page li.item {
+    text-align: center;
+    padding-left: 23%;
+    padding-right: 23%;
+}
+
+.list-page {
+    width: 50%;
+    margin: auto;
+}
+
+
+
+img.img-size-50 {
+    border-radius: 50%;
+}
+
+.direct-chat-messages {
+    height: 100vh;
+    overflow:  unset;
+}
+
+
+
+.order {
+    width: 35%;
+    display: inherit;
+}
+
+.chat {
+    width: 62%;
+    display: inherit;
+}
+
+.conversation {
+    width: 75%;
+    display: inline-block;
+    height: 100vh;
+}
+
+.list-contact {
+    width: 22%;
+    display: inline-block;
+    height: 100vh;
+
+}
+.conversation.chat,.conversation.order,.list-contact{
+    height: 100%;
+}

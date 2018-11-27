@@ -1,0 +1,121 @@
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Thông tin cá nhân</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">User Profile</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <!-- Profile Image -->
+                    <div class="card card-primary card-outline">
+                        <div class="card-body box-profile">
+                            <div class="text-center">
+                                <img class="profile-user-img img-fluid img-circle"
+                                     src="../../../public/img/avatar/no-avatar.png"
+                                     alt="User profile picture">
+                            </div>
+
+                            <h3 class="profile-username text-center"><?= $info['TenTK']?></h3>
+
+                            <p class="text-muted text-center">Thành viên</p>
+
+                            <ul class="list-group list-group-unbordered mb-3">
+                                <li class="list-group-item">
+                                    <b>Tài khoản</b> <a class="float-right">1,322</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Số dư</b> <a class="float-right"><?= number_format($info['Sodu'],0,'.','.')?></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Ngân hàng</b> <a class="float-right">13,287</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+
+
+                </div>
+                <!-- /.col -->
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <ul class="nav nav-pills">
+
+                                <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Cập nhật</a></li>
+                            </ul>
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-content">
+
+
+                                <div class="tab-pane active" id="settings">
+                                    <form class="form-horizontal" action="#">
+                                        <div class="form-group">
+                                            <label for="inputName" class="col-sm-2 control-label">Tên</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text" value="<?= $info['TenTK']?>" class="form-control" id="inputName" placeholder="Tên">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail" class="col-sm-2 control-label">Số điện thoại</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="number" min="0" value="<?= $info['SDT']?>" class="form-control" id="inputEmail" placeholder="Số diện thoại">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputName2" class="col-sm-2 control-label">Địa chỉ</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text" value=" <?= $info['DiaChi']?>" class="form-control" id="inputName2" placeholder="Địa chỉ">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputSkills" class="col-sm-2 control-label">Ngày sinh</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text" value="<?= $info['NgaySinh']?>" class="form-control" id="inputSkills" placeholder="Ngày sinh">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-danger">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.nav-tabs-custom -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
