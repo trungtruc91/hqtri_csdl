@@ -21,4 +21,14 @@ class Users extends Db
     public function getDataById($id){
         return $this->select($this->_DBName,['MaTK'=>$id]);
     }
+    public function updateInfo($arrParams){
+
+        $id=$arrParams['info']['id'];
+        $name=$arrParams['info']['name'];
+        $sdt=$arrParams['info']['sdt'];
+        $address=$arrParams['info']['address'];
+        $date=$arrParams['info']['date'];
+        return $this->_con->execute('CALL update_info(?,?,?,?,?)',[$id,$name,$sdt,$address,$date]);
+
+    }
 }

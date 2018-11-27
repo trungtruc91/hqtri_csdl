@@ -20,8 +20,13 @@ class UserController extends Controller
         }
     }
     public function profileAction(){
-        $modelUser=new Users();
         $id=$this->session->get('user_id');
+        $modelUser=new Users();
+        if ($this->request->isPost()){
+            $arrParams=$this->request->get();
+            $arrParams['info']['id']=$id;
+            $modelUser->updateInfo($arrParams);
+        }
         $result=$modelUser->getDataById($id);
         $this->view->info=$result[0];
     }
