@@ -15,8 +15,9 @@ use Zs\Admin\Models\Users;
 class UserController extends Controller
 {
     public function initialize(){
-
-
+        if(!$this->session->has('username')){
+            $this->response->redirect('admin/index/login');
+        }
     }
     public function profileAction(){
         $modelUser=new Users();
