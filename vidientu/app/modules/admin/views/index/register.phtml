@@ -1,0 +1,63 @@
+
+<div class="login-box">
+    <div class="login-logo">
+        <a href="../../index2.html"><b>H</b>Pay</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+        <div class="card-body register-card-body">
+            <p class="login-box-msg">Register a new membership</p>
+            <?= $this->getContent();?>
+            <form action="" method="post">
+                <div class="form-group has-feedback">
+                    <input type="text" name="user[name]" class="form-control" placeholder="Full name">
+                    <span class="fa fa-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="user[username]" class="form-control" placeholder="Username">
+                    <span class="fa fa-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="user[password]" class="form-control" placeholder="Password">
+                    <span class="fa fa-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="user[rePass]" class="form-control" placeholder="Retype password">
+                    <span class="fa fa-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group">
+
+                    <select name="user[bank]" class="form-control">
+                        <?php foreach ($listBank as $item) {
+                            echo "<option value='{$item['Name']}'>{$item['Name']}</option>";
+                        }?>
+                    </select>
+                    <span class="fa fa-bank form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="user[branch]" min="0" class="form-control" placeholder="Located">
+                    <span class="fa fa-map-marker form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="number" name="user[card]" min="0" class="form-control" placeholder="Number Card">
+                    <span class="fa fa-credit-card form-control-feedback"></span>
+                </div>
+                <div class="row">
+
+                    <!-- /.col -->
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+
+
+
+            <a  href="/admin/index/login" class="text-center mt-2" style="display: block">I already have a membership</a>
+        </div>
+        <!-- /.form-box -->
+    </div><!-- /.card -->
+</div>
+<!-- /.login-box -->
+

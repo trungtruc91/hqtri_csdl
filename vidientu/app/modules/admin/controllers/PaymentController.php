@@ -17,8 +17,11 @@ class PaymentController extends Controller
             $this->response->redirect('admin/index/login');
         }
     }
-    public function indexAction()
+    public function transfersAction()
     {
+
+    }
+    public function rechargeAction(){
 
     }
 }

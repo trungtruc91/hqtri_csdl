@@ -3,6 +3,9 @@
 use Phalcon\Mvc\Url as UrlProvider;
 use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 use Phalcon\Session\Adapter\Files as Session;
+use Phalcon\Flash\Direct as FlashDirect;
+use Phalcon\Flash\Session as FlashSession;
+
 
 $di = new Phalcon\Di\FactoryDefault();
 
@@ -26,6 +29,7 @@ $di->set('router',function (){
 //    }
 //
 //);
+
 $di->setShared(
     'session',
     function () {
@@ -43,6 +47,30 @@ $di->setShared('zs_configs', function () use ($di) {
 });
 
 
+
+$di->set(
+    'flash',
+    function () {
+        $flash = new FlashDirect(
+            [
+                'error'   => 'alert alert-danger',
+                'success' => 'alert alert-success',
+                'notice'  => 'alert alert-info',
+                'warning' => 'alert alert-warning',
+            ]
+        );
+
+        return $flash;
+    }
+);
+
+// Set up the flash session service
+$di->set(
+    'flashSession',
+    function () {
+        return new FlashSession();
+    }
+);
 
 // Setup a base URI so that all generated URIs include the "tutorial" folder
 $di->set(

@@ -5,7 +5,8 @@ $conArr = [
         "host"     => "localhost",
         "username" => "root",
         "password" => "localhost",
-        "dbname"   => "vidientu"
+        "dbname"   => "vidientu",
+        'charset'   =>'utf8'
     ]
 
 

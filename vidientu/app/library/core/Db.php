@@ -92,6 +92,21 @@ class Db
 
         return $where;
     }
+    public function createID($table,$column){
+        $query="SELECT $column FROM $table";
+        $result=$this->_con->fetchAll($query,\Phalcon\Db::FETCH_ASSOC,[]);
+        $string=[];
+        $number=[];
+
+        foreach ($result as $item) {
+            $pos=strpos($item[$column],'_');
+            $string[]=substr($item[$column],0,$pos);
+            $number[]=substr($item[$column],$pos+1);
+            }
+        $newNumber=max($number) +1 ;
+        $nameId=$string[0]."_$newNumber";
+        return $nameId;
+    }
 
 
 }

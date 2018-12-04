@@ -19,6 +19,7 @@ class UserController extends Controller
             $this->response->redirect('admin/index/login');
         }
     }
+
     public function profileAction(){
         $id=$this->session->get('user_id');
         $modelUser=new Users();

@@ -172,6 +172,7 @@ function loadToastr(status, msg) {
     };
 
     if (status == 1) {
+        console.log("Sdf");
         toastr.success(msg, 'Success');
     } else {
         toastr.error(msg, 'Error');
